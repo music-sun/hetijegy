@@ -8,6 +8,10 @@ export default {
             '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
         }
     },
+    server: {
+        port: 8080,
+        hot: true
+    },
     plugins: [
         handlebars({ context: require('./data.json') })
     ],
