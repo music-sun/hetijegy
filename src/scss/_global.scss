@@ -1,0 +1,22 @@
+body, app-main {
+    .fade-display {
+        opacity: 0;
+        visibility: hidden;
+        transition-property: opacity, visibility, transform;
+        transition-duration: 300ms;
+        transform: translateY(10px);
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+    }
+
+    h1.gradient-text {
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent;
+        background: -webkit-linear-gradient(120deg, #c703c7 30%, #3fef8f);
+    }
+}

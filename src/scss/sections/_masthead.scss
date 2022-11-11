@@ -1,0 +1,33 @@
+.masthead {
+    width: 100%;
+    height: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    
+    h1 {
+        font-family: $font-family-base;
+        font-size: 4.5rem;
+        line-height: 6rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+        h1 {
+            font-size: 7rem;
+            line-height: 9rem;
+        }
+    }
+    
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+        padding-top: 0;
+        padding-bottom: 0;
+        min-height: 775px;
+
+        h2 {
+            max-width: 30rem;
+        }
+    }
+}

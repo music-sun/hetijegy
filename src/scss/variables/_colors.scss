@@ -1,0 +1,23 @@
+$light: #ebedff;
+$dark: #161321;
+$dark-alternate: #2a2443;
+$primary: #5584ca;
+$info: $dark;
+$success: #4fa275;
+$warning: #cc923d;
+$danger: #f44336;
+$dark-accent: #0b1560;
+$light-accent: #800080;
+
+$theme-colors: (
+    "light-accent": $light-accent,
+    "dark-accent": $dark-accent,
+    "dark-alternate": $dark-alternate,
+    "light": $light,
+    "dark": $dark,
+    "primary": $primary,
+    "info": $info,
+    "success": $success,
+    "warning": $warning,
+    "danger": $danger
+);
