@@ -1,6 +1,7 @@
 import { Recaptcha } from "../lib/recaptcha";
+import { CaptchaService } from './captcha-service';
 
-export class CaptchaService {
+export default class implements CaptchaService {
     constructor(private service: Recaptcha, private siteKey: string) {}
 
     public getResponseToken() {
