@@ -1,7 +1,7 @@
 import { Component } from '../decorators/component';
 import { Inject } from '../decorators/inject';
 import { Reference } from '../decorators/reference';
-import { CaptchaService } from '../services/captcha-service';
+import { CaptchaService } from '../services/captcha-service.default';
 import { AlertFeedbackForm } from './alert-feedback-form';
 
 const INVALID_EMAIL = ['Hibás e-mail címet adtál meg!'];

@@ -9,7 +9,7 @@ import { Recaptcha } from './lib/recaptcha';
 import { Component } from './decorators/component';
 import { ServiceContainer } from './decorators/service-container';
 import { ServiceClient } from './services/service-client';
-import { CaptchaService } from './services/captcha-service';
+import { CaptchaService } from './services/captcha-service.default';
 import config from './config';
 
 declare let grecaptcha: Recaptcha;
