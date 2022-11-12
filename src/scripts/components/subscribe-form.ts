@@ -14,10 +14,10 @@ const UNKNOWN_ERROR = ['Váratlan hiba történt, próbáld újra!'];
     selector: 'app-subscribe-form'
 })
 export class SubscribeForm extends AlertFeedbackForm {
-    
+
     @Reference('#subscribe-email') private input!: HTMLInputElement;
 
-    @Inject() private captchaService!: CaptchaService;
+    @Inject(CaptchaService) private captchaService!: CaptchaService;
 
     protected async getResponse(): Promise<Response> {
         const responseToken = await this.captchaService.getResponseToken();

@@ -8,7 +8,7 @@ import { Feedback } from './feedback';
 
 export abstract class AlertFeedbackForm extends HTMLElement {
 
-    @Inject() protected client!: ServiceClient;
+    @Inject(ServiceClient) protected client!: ServiceClient;
 
     @Fadeable
     @Transitionable
