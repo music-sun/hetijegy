@@ -1,4 +1,3 @@
-import '../scss/styles.scss';
 import { UnsubscribeForm } from './components/unsubscribe-form';
 import config from './config';
 

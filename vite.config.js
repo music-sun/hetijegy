@@ -18,7 +18,9 @@ export default {
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'src/index.hbs')
+                main: resolve(__dirname, 'src/index.html'),
+                unsubscribe: resolve(__dirname, 'src/unsubscribe.html'),
+                data: resolve(__dirname, 'src/adatkezeles.html'),
             }
         }
     }
