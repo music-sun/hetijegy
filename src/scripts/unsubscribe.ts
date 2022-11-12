@@ -3,7 +3,7 @@ import config from './config';
 
 import { Component } from './decorators/component';
 import { ServiceContainer } from './decorators/service-container';
-import { ServiceClient } from './services/service-client';
+import { ServiceClient } from './services/service-client.default';
 
 interface Unsubscribe extends Component {}
 
