@@ -1,4 +1,4 @@
-import { ElementPropertyDecorator } from './types';
+type ElementPropertyDecorator = (target: HTMLElement, propertyKey: string | symbol) => void;
 
 export const Input: (name?: string) => ElementPropertyDecorator =
     name => (target: HTMLElement, propertyKey: string | symbol) => {
