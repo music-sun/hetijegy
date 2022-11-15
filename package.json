@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "no-api": "vite --mode no-api",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"

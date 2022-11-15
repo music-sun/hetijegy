@@ -4,7 +4,7 @@ import { ServiceClient } from './service-client';
 
 declare let grecaptcha: Recaptcha;
 
-const suffix = import.meta.env.DEV ? 'dev' : 'default';
+const suffix = import.meta.env.MODE === 'no-api' ? 'no-api' : 'default';
 
 const serviceClientConstructor = (await import(`./service-client.${suffix}.ts`)).default;
 const captchaServiceConstructor =  (await import(`./captcha-service.${suffix}.ts`)).default;
