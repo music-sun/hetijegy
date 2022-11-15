@@ -3,11 +3,11 @@ import { AlertFeedbackForm } from './alert-feedback-form';
 import { captchaService } from '../services/container';
 import { CaptchaService } from '../services/captcha-service';
 
-const INVALID_EMAIL = ['Hibás e-mail címet adtál meg!'];
-const USER_EXISTS   = ['Ezzel a címmel már regisztráltak!'];
-const NO_ROBOT      = ['Robotok nem iratkozhatnak fel :('];
-const SUCCESS       = ['Sikeres feliratkozás!'];
-const UNKNOWN_ERROR = ['Váratlan hiba történt, próbáld újra!'];
+const INVALID_EMAIL = 'Hibás e-mail címet adtál meg!';
+const USER_EXISTS   = 'Ezzel a címmel már regisztráltak!';
+const NO_ROBOT      = 'Robotok nem iratkozhatnak fel :(';
+const SUCCESS       = 'Sikeres feliratkozás!';
+const UNKNOWN_ERROR = 'Váratlan hiba történt, próbáld újra!';
 
 export class SubscribeForm extends AlertFeedbackForm {
 

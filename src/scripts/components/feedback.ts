@@ -18,23 +18,23 @@ export class Feedback extends HTMLElement {
 
     @Input('error-bg') protected errorBg!: string;
 
-    @Reference('.feedback-content') protected references!: HTMLElement[];
+    @Reference('.feedback-content') protected feedbackContent!: HTMLElement;
 
-    public showSuccess(content: string[]) {
+    public showSuccess(content: string) {
         return this.show(this.successBg, content);
     }
 
-    public showError(content: string[]) {
+    public showError(content: string) {
         return this.show(this.errorBg, content);
     }
 
-    public async toastSuccess(content: string[]) {
+    public async toastSuccess(content: string) {
         await this.showSuccess(content);
 
         await this.toast();
     }
 
-    public async toastError(content: string[]) {
+    public async toastError(content: string) {
         await this.showError(content);
 
         await this.toast();
@@ -46,7 +46,7 @@ export class Feedback extends HTMLElement {
         this.classList.remove(this.errorBg, this.successBg);
     }
 
-    protected show(cssClass: string, content: string[]) {
+    protected show(cssClass: string, content: string) {
         this.classList.add(cssClass);
 
         this.setContent(content);
@@ -60,10 +60,7 @@ export class Feedback extends HTMLElement {
         await this.hide();
     }
 
-    protected setContent(content: string[]) {
-        for (let i = 0; i < Math.min(content.length, this.references.length); i++)
-        {
-            this.references[i].innerText = content[i];
-        }
+    protected setContent(content: string) {
+        this.feedbackContent.innerText = content;
     }
 }

@@ -72,5 +72,5 @@ export abstract class AlertFeedbackForm extends HTMLElement {
         await (response.ok ? this.feedback.toastSuccess(content) : this.feedback.toastError(content));
     }
 
-    protected abstract getMessage(response: Response): Promise<string[]>;
+    protected abstract getMessage(response: Response): Promise<string>;
 }

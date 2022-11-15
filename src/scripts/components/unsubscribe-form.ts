@@ -1,8 +1,8 @@
 import { Reference } from '../decorators/reference';
 import { AlertFeedbackForm } from './alert-feedback-form';
 
-const SUCCESS_MESSAGE   = ['Sikeresen leiratkoztál!'];
-const ERROR_MESSAGE     = ['Hiba történt, kérjük, próbáld újra!'];
+const SUCCESS_MESSAGE   = 'Sikeresen leiratkoztál!';
+const ERROR_MESSAGE     = 'Hiba történt, kérjük, próbáld újra!';
 
 export class UnsubscribeForm extends AlertFeedbackForm {
 
