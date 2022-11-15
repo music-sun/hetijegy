@@ -1,4 +1,3 @@
-import { Component } from '../decorators/component';
 import { Reference } from '../decorators/reference';
 import { AlertFeedbackForm } from './alert-feedback-form';
 import { captchaService } from '../services/container';
@@ -10,9 +9,6 @@ const NO_ROBOT      = ['Robotok nem iratkozhatnak fel :('];
 const SUCCESS       = ['Sikeres feliratkozás!'];
 const UNKNOWN_ERROR = ['Váratlan hiba történt, próbáld újra!'];
 
-@Component({
-    selector: 'app-subscribe-form'
-})
 export class SubscribeForm extends AlertFeedbackForm {
 
     private captchaService: CaptchaService;

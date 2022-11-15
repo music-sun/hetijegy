@@ -4,13 +4,9 @@ import { Fadeable } from '../decorators/fadeable';
 import { Transitionable } from '../decorators/transitionable';
 import { Input } from '../decorators/input';
 import { Reference } from '../decorators/reference';
-import { Component } from '../decorators/component';
 
 export interface Feedback extends Displayable, Transitionable, Fadeable {}
 
-@Component({
-    selector: 'app-feedback'
-})
 @Fadeable
 @Transitionable
 @Displayable

@@ -1,13 +1,9 @@
 import { bindAnimationFrame } from '../lib/animation';
 import { Collapse } from 'bootstrap';
 import { Reference } from '../decorators/reference';
-import { Component } from '../decorators/component';
 
 const NAVBAR_TOGGLE_CLASS = 'navbar-shrink';
 
-@Component({
-    selector: 'app-navbar'
-})
 export class Navbar extends HTMLElement {
 
     @Reference('#navbar-responsive-menu') private menu!: HTMLElement;
