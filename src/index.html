@@ -16,216 +16,214 @@
 </head>
 
 <body class="bg-dark" data-bs-spy="scroll" data-bs-target="#main-nav">
-    <app-main>
-        <app-navbar class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
-            <div class="container">
-                <a class="navbar-brand" href="#feliratkozas">
-                    <img src="https://cdn.hetijegy.hu/icon.svg" alt="hetijegy" width="24" height="24" class="d-inline-block align-text-bottom me-2">
-                    hetijegy
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbar-responsive-menu"
-                    aria-controls="navbar-responsive-menu"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar-responsive-menu">
-                    <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#feliratkozas">Feliratkozás</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#info">Mi ez?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#eloadok">Előadók</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://muszerfal.hetijegy.hu" target="_blank">Bejelentkezés</a>
-                        </li>
-                    </ul>
-                </div>
+    <app-navbar class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#feliratkozas">
+                <img src="https://cdn.hetijegy.hu/icon.svg" alt="hetijegy" width="24" height="24" class="d-inline-block align-text-bottom me-2">
+                hetijegy
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-responsive-menu"
+                aria-controls="navbar-responsive-menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-responsive-menu">
+                <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feliratkozas">Feliratkozás</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#info">Mi ez?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#eloadok">Előadók</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://muszerfal.hetijegy.hu" target="_blank">Bejelentkezés</a>
+                    </li>
+                </ul>
             </div>
-        </app-navbar>
+        </div>
+    </app-navbar>
 
-        <header class="masthead" id="feliratkozas">
-            <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-lg-7 my-lg-auto mb-5 order-lg-0 order-1">
-                        <div class="row">
-                            <div class="col mb-3 text-center text-lg-start">
-                                <h1 class="text-light gradient-text">hetijegy</h1>
-                                <h2 class="text-light">Személyre szabott heti hírlevél a kedvenc előadóid aktuális koncertjeivel és megjelenéseivel.</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <app-subscribe-form class="col-xl-9 col" id="subscribe-form-container">
-                                <div class="w-100 position-relative">
-                                    <app-feedback 
-                                        success-bg="alert-success"
-                                        error-bg="alert-danger"
-                                        class="feedback-container alert w-100 position-absolute fade-display d-none">
-                                        <span class="feedback-content"></span>
-                                    </app-feedback>
-                                </div>
-                            
-                                <div class="form-container fade-display show">
-                                    <form>
-                                        <fieldset>
-                                            <div class="form-floating mb-3">
-                                                <input type="email" class="form-control" id="subscribe-email" placeholder="email@email.com" name="email" required>
-                                                <label for="subscribe-email">Email</label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="checkbox" name="accept" id="subscribe-checkbox" required>
-                                                <label class="form-check-label text-light" for="subscribe-checkbox" required>
-                                                    Elolvastam és elfogadom az <a href="/adatkezeles" target="_blank">adatkezelési tájékoztató</a> tartalmát</label>
-                                            </div>
-                                            <div class="d-grid">
-                                                <button class="btn btn-light-accent btn-lg" type="submit">
-                                                    <span class="default-text">Feliratkozás</span>
-                                                    <span class="loading-text d-none">
-                                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                                        Mentés...
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </app-subscribe-form>
+    <header class="masthead" id="feliratkozas">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-7 my-lg-auto mb-5 order-lg-0 order-1">
+                    <div class="row">
+                        <div class="col mb-3 text-center text-lg-start">
+                            <h1 class="text-light gradient-text">hetijegy</h1>
+                            <h2 class="text-light">Személyre szabott heti hírlevél a kedvenc előadóid aktuális koncertjeivel és megjelenéseivel.</h2>
                         </div>
                     </div>
-                    <div class="col-lg-5 my-auto order-lg-1 order-0">
-                        <div class="logo-wrapper col-6 col-md-12 mx-auto">
-                            <div  class="logo-container position-relative">
-                                <div class="logo-bg w-100 h-100 position-absolute"></div>
-                                <img src="https://cdn.hetijegy.hu/icon.svg" class="position-absolute">
+                    <div class="row">
+                        <app-subscribe-form class="col-xl-9 col" id="subscribe-form-container">
+                            <div class="w-100 position-relative">
+                                <app-feedback 
+                                    success-bg="alert-success"
+                                    error-bg="alert-danger"
+                                    class="feedback-container alert w-100 position-absolute fade-display d-none">
+                                    <span class="feedback-content"></span>
+                                </app-feedback>
                             </div>
-                        </div>
+                        
+                            <div class="form-container fade-display show">
+                                <form>
+                                    <fieldset>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="subscribe-email" placeholder="email@email.com" name="email" required>
+                                            <label for="subscribe-email">Email</label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" name="accept" id="subscribe-checkbox" required>
+                                            <label class="form-check-label text-light" for="subscribe-checkbox" required>
+                                                Elolvastam és elfogadom az <a href="/adatkezeles" target="_blank">adatkezelési tájékoztató</a> tartalmát</label>
+                                        </div>
+                                        <div class="d-grid">
+                                            <button class="btn btn-light-accent btn-lg" type="submit">
+                                                <span class="default-text">Feliratkozás</span>
+                                                <span class="loading-text d-none">
+                                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                    Mentés...
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </app-subscribe-form>
                     </div>
                 </div>
-            </div>
-        </header>
-
-        <section class="info-section text-light pt-5" id="info">
-            <div class="container mt-5">
-                <div class="row align-items-stretch gy-4">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-dark-alternate border-0 h-100">
-                            <div class="card-body">
-                                <h4 class="card-title">Az összes koncert, zene és videó egy helyen</h4>
-                                <p class="card-text text-light text-opacity-75">
-                                    A hetijegy minden héten összegyűjti a magyar előadók következő heti koncertjeit,
-                                    új zenéit és videóit.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-dark-alternate border-0 h-100">
-                            <div class="card-body">
-                                <h4 class="card-title">Személyre szabott</h4>
-                                <p class="card-text text-light text-opacity-75">
-                                    Feliratkozás után te választod ki, melyik <a href="#eloadok">előadók</a> érdekelnek,
-                                    a hírlevélben pedig csak ezek fognak szerepelni. Ezt bármikor megváltoztathatod a
-                                    <a href="https://muszerfal.hetijegy.hu" target="_blank">műszerfalon</a>.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-dark-alternate border-0 h-100">
-                            <div class="card-body">
-                                <h4 class="card-title">Minden egy kattintásra</h4>
-                                <p class="card-text text-light text-opacity-75">
-                                    A hírlevélből közvetlenül megnyithatod az eseményeket, zenéket, videókat, jegyvásárlási
-                                    linkeket, és még a naptáradba is egy kattintással elmentheted a fontos koncerteket.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-dark-alternate border-0 h-100">
-                            <div class="card-body">
-                                <h4 class="card-title">Heti egy email</h4>
-                                <p class="card-text text-light text-opacity-75">
-                                    Hétfőnként, egyetlen emailben összesítve kapod meg az általad követett előadók híreit.
-                                    Ha úgy döntesz, nem szeretnél több emailt kapni, bármikor
-                                    <a href="https://hetijegy.hu/unsubscribe" target="_blank">leiratkozhatsz</a>.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-dark-alternate border-0 h-100">
-                            <div class="card-body">
-                                <h4 class="card-title">{{bands.length}} előadó</h4>
-                                <p class="card-text text-light text-opacity-75">
-                                    A hetijegyen követhető magyar <a href="#eloadok">előadók</a> listája folyamatosan bővül,
-                                    ezért érdemes időnként
-                                    <a href="https://muszerfal.hetijegy.hu" target="_blank">bejelentkezned a műszerfalra</a>,
-                                    hogy új előadókat követhess.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card bg-dark-alternate border-0 h-100">
-                            <div class="card-body">
-                                <h4 class="card-title">Kapcsolat</h4>
-                                <p class="card-text text-light text-opacity-75">
-                                    Csóré Zoltán vagyok, a rendszer fejlesztője, az SZ4P énekes-gitárosa.
-                                    Ha hiányolsz egy előadót, kérdésed, ötleted, javaslatod van a hetijeggyel kapcsolatban,
-                                    bátran írd meg ide: <a href="mailto:info@hetijegy.hu">info@hetijegy.hu</a>!
-                                </p>
-                            </div>
+                <div class="col-lg-5 my-auto order-lg-1 order-0">
+                    <div class="logo-wrapper col-6 col-md-12 mx-auto">
+                        <div  class="logo-container position-relative">
+                            <div class="logo-bg w-100 h-100 position-absolute"></div>
+                            <img src="https://cdn.hetijegy.hu/icon.svg" class="position-absolute">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <section class="bands-section text-light pt-5 pb-3" id="eloadok">
-            <div class="container mt-5">
-                <h2 class="display-3">Előadók</h2>
-                <h3 class="text-light text-opacity-75">Folyamatosan bővülő lista, jelenleg <strong>{{bands.length}}</strong> előadóval.</h3>
-                <div class="row align-items-stretch gy-3 mt-3">
-                    {{#each bands}}
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card bg-dark-alternate border-0 h-100">
-                                <div class="card-body">{{this}}</div>
-                            </div>
+    <section class="info-section text-light pt-5" id="info">
+        <div class="container mt-5">
+            <div class="row align-items-stretch gy-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card bg-dark-alternate border-0 h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Az összes koncert, zene és videó egy helyen</h4>
+                            <p class="card-text text-light text-opacity-75">
+                                A hetijegy minden héten összegyűjti a magyar előadók következő heti koncertjeit,
+                                új zenéit és videóit.
+                            </p>
                         </div>
-                    {{/each}}
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <footer class="bg-dark-alternate py-3">
-            <div class="container">
-                <div class="row justify-content-between align-items-center text-light text-opacity-75">
-                    <div class="col">© 2022 Csóré Zoltán</div>
-                    <div class="col d-flex justify-content-end">
-                        <a class="text-light text-opacity-75" href="https://github.com/codernr" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
-                        </a>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card bg-dark-alternate border-0 h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Személyre szabott</h4>
+                            <p class="card-text text-light text-opacity-75">
+                                Feliratkozás után te választod ki, melyik <a href="#eloadok">előadók</a> érdekelnek,
+                                a hírlevélben pedig csak ezek fognak szerepelni. Ezt bármikor megváltoztathatod a
+                                <a href="https://muszerfal.hetijegy.hu" target="_blank">műszerfalon</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card bg-dark-alternate border-0 h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Minden egy kattintásra</h4>
+                            <p class="card-text text-light text-opacity-75">
+                                A hírlevélből közvetlenül megnyithatod az eseményeket, zenéket, videókat, jegyvásárlási
+                                linkeket, és még a naptáradba is egy kattintással elmentheted a fontos koncerteket.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card bg-dark-alternate border-0 h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Heti egy email</h4>
+                            <p class="card-text text-light text-opacity-75">
+                                Hétfőnként, egyetlen emailben összesítve kapod meg az általad követett előadók híreit.
+                                Ha úgy döntesz, nem szeretnél több emailt kapni, bármikor
+                                <a href="https://hetijegy.hu/unsubscribe" target="_blank">leiratkozhatsz</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card bg-dark-alternate border-0 h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">{{bands.length}} előadó</h4>
+                            <p class="card-text text-light text-opacity-75">
+                                A hetijegyen követhető magyar <a href="#eloadok">előadók</a> listája folyamatosan bővül,
+                                ezért érdemes időnként
+                                <a href="https://muszerfal.hetijegy.hu" target="_blank">bejelentkezned a műszerfalra</a>,
+                                hogy új előadókat követhess.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card bg-dark-alternate border-0 h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Kapcsolat</h4>
+                            <p class="card-text text-light text-opacity-75">
+                                Csóré Zoltán vagyok, a rendszer fejlesztője, az SZ4P énekes-gitárosa.
+                                Ha hiányolsz egy előadót, kérdésed, ötleted, javaslatod van a hetijeggyel kapcsolatban,
+                                bátran írd meg ide: <a href="mailto:info@hetijegy.hu">info@hetijegy.hu</a>!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="bands-section text-light pt-5 pb-3" id="eloadok">
+        <div class="container mt-5">
+            <h2 class="display-3">Előadók</h2>
+            <h3 class="text-light text-opacity-75">Folyamatosan bővülő lista, jelenleg <strong>{{bands.length}}</strong> előadóval.</h3>
+            <div class="row align-items-stretch gy-3 mt-3">
+                {{#each bands}}
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card bg-dark-alternate border-0 h-100">
+                            <div class="card-body">{{this}}</div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-alternate py-3">
+        <div class="container">
+            <div class="row justify-content-between align-items-center text-light text-opacity-75">
+                <div class="col">© 2022 Csóré Zoltán</div>
+                <div class="col d-flex justify-content-end">
+                    <a class="text-light text-opacity-75" href="https://github.com/codernr" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
         </footer>
-    </app-main>
 
     <script type="module" src="./scripts/main.ts"></script>
 </body>

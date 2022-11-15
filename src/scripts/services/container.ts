@@ -1,0 +1,13 @@
+import { Recaptcha } from '../lib/recaptcha';
+import { CaptchaService } from './captcha-service';
+import { ServiceClient } from './service-client';
+
+declare let grecaptcha: Recaptcha;
+
+const suffix = import.meta.env.DEV ? 'dev' : 'default';
+
+const serviceClientConstructor = (await import(`./service-client.${suffix}`)).default;
+const captchaServiceConstructor =  (await import(`./captcha-service.${suffix}`)).default;
+
+export const serviceClient = new serviceClientConstructor(import.meta.env.VITE_BASE_URL) as ServiceClient;
+export const captchaService = new captchaServiceConstructor(grecaptcha, import.meta.env.VITE_CAPTCHA_SITE_KEY) as CaptchaService;

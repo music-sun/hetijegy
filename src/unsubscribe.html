@@ -12,47 +12,45 @@
 </head>
 
 <body class="bg-dark text-light h-100">
-    <app-unsubscribe class="h-100">
-        <div class="container p-5 my-auto">
-            <div class="row justify-content-center text-center">
-                <app-unsubscribe-form  class="col col-xl-8 col-lg-10">
-                    <div class="w-100 position-relative">
-                        <app-feedback
-                            success-bg="alert-success"
-                            error-bg="alert-danger"
-                            class="alert w-100 position-absolute fade-display d-none">
-                            <span class="feedback-content"></span>
-                        </div>
-                    </app-feedback>
-                    <div class="form-container card bg-dark-accent fade-display show">
-                        <div class="card-body">
-                            <h2 class="my-3">Leiratkozás</h2>
-                            <p class="mb-4">
-                                Írd be az email címed a leiratkozás megerősítéséhez!
-                            </p>
-                            <form>
-                                <fieldset>
-                                    <div class="form-floating mb-3 text-dark">
-                                        <input type="email" class="form-control" id="unsubscribe-email" placeholder="email@email.com" name="email" required>
-                                        <label for="dashboard-email">Email</label>
-                                    </div>
-                                    <div class="d-grid">
-                                        <button class="btn btn-light-accent" type="submit">
-                                            <span class="default-text">Leiratkozás</span>
-                                            <span class="loading-text d-none">
-                                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                                Küldés...
-                                            </span>
-                                        </button>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
+    <div class="container p-5 my-auto">
+        <div class="row justify-content-center text-center">
+            <app-unsubscribe-form  class="col col-xl-8 col-lg-10">
+                <div class="w-100 position-relative">
+                    <app-feedback
+                        success-bg="alert-success"
+                        error-bg="alert-danger"
+                        class="alert w-100 position-absolute fade-display d-none">
+                        <span class="feedback-content"></span>
                     </div>
-                </app-unsubscribe-form>
-            </div>
+                </app-feedback>
+                <div class="form-container card bg-dark-accent fade-display show">
+                    <div class="card-body">
+                        <h2 class="my-3">Leiratkozás</h2>
+                        <p class="mb-4">
+                            Írd be az email címed a leiratkozás megerősítéséhez!
+                        </p>
+                        <form>
+                            <fieldset>
+                                <div class="form-floating mb-3 text-dark">
+                                    <input type="email" class="form-control" id="unsubscribe-email" placeholder="email@email.com" name="email" required>
+                                    <label for="dashboard-email">Email</label>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-light-accent" type="submit">
+                                        <span class="default-text">Leiratkozás</span>
+                                        <span class="loading-text d-none">
+                                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                            Küldés...
+                                        </span>
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </app-unsubscribe-form>
         </div>
-    </app-unsubscribe>
+        </div>
 
     <script type="module" src="./scripts/unsubscribe.ts"></script>
 </body>

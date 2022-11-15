@@ -1,8 +1,8 @@
 import { Component } from '../decorators/component';
-import { Inject } from '../decorators/inject';
 import { Reference } from '../decorators/reference';
-import { CaptchaService } from '../services/captcha-service.default';
 import { AlertFeedbackForm } from './alert-feedback-form';
+import { captchaService } from '../services/container';
+import { CaptchaService } from '../services/captcha-service';
 
 const INVALID_EMAIL = ['Hibás e-mail címet adtál meg!'];
 const USER_EXISTS   = ['Ezzel a címmel már regisztráltak!'];
@@ -15,9 +15,14 @@ const UNKNOWN_ERROR = ['Váratlan hiba történt, próbáld újra!'];
 })
 export class SubscribeForm extends AlertFeedbackForm {
 
+    private captchaService: CaptchaService;
+
     @Reference('#subscribe-email') private input!: HTMLInputElement;
 
-    @Inject(CaptchaService) private captchaService!: CaptchaService;
+    constructor() {
+        super();
+        this.captchaService = captchaService;
+    }
 
     protected async getResponse(): Promise<Response> {
         const responseToken = await this.captchaService.getResponseToken();

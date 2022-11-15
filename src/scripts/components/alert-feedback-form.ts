@@ -1,14 +1,14 @@
 import { Displayable } from '../decorators/displayable';
 import { Fadeable } from '../decorators/fadeable';
-import { Inject } from '../decorators/inject';
 import { Reference } from '../decorators/reference';
 import { Transitionable } from '../decorators/transitionable';
-import { ServiceClient } from '../services/service-client.default';
+import { serviceClient } from '../services/container';
+import { ServiceClient } from '../services/service-client';
 import { Feedback } from './feedback';
 
 export abstract class AlertFeedbackForm extends HTMLElement {
 
-    @Inject(ServiceClient) protected client!: ServiceClient;
+    protected client: ServiceClient;
 
     @Fadeable
     @Transitionable
@@ -29,6 +29,11 @@ export abstract class AlertFeedbackForm extends HTMLElement {
     @Displayable
     @Reference('button .loading-text')
     protected loadingText!: HTMLElement & Displayable;
+
+    constructor() {
+        super();
+        this.client = serviceClient;
+    }
 
     public connectedCallback(): void {
         this.form.addEventListener('submit', async (event) => {
