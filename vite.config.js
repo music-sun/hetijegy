@@ -31,6 +31,7 @@ export default defineConfig(async ({ mode }) => {
             handlebars({ context })
         ],
         build: {
+            outDir: '../dist',
             rollupOptions: {
                 input: {
                     main: resolve(__dirname, 'src/index.html'),
