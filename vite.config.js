@@ -13,7 +13,6 @@ function getContext(mode) {
 
 export default defineConfig(async ({ mode }) => {
     const context = await getContext(mode);
-    console.log(context);
     return {
         root: resolve(__dirname, 'src'),
         resolve: {
