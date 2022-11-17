@@ -1,0 +1,30 @@
+name: Staging deploy
+
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: npm install & build
+        env:
+          PAGE_DATA_URL: ${{ secrets.STAGING_PAGE_DATA_URL }}
+        run: |
+          npm install
+          npm run build -- --mode staging
+
+      - name: Deploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.STAGING_DEPLOYMENT_TOKEN }}
+          action: upload
+          app_location: ./dist
+          output_location: ''
+          skip_app_build: true
