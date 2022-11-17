@@ -15,7 +15,12 @@
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "types": ["vite/client"],
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+        "service-client": ["src/scripts/services/service-client"],
+        "captcha-service": ["src/scripts/services/captcha-service"]
+    }
   },
   "include": ["src"]
 }

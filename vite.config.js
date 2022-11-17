@@ -19,6 +19,8 @@ export default defineConfig(async ({ mode }) => {
         resolve: {
             alias: {
                 '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
+                'service-client': resolve(__dirname, `src/scripts/services/service-client${ mode === 'no-api' ? '.no-api' : ''}`),
+                'captcha-service': resolve(__dirname, `src/scripts/services/captcha-service${ mode === 'no-api' ? '.no-api' : ''}`)
             }
         },
         server: {

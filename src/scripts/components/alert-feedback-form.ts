@@ -3,7 +3,7 @@ import { Fadeable } from '../decorators/fadeable';
 import { Reference } from '../decorators/reference';
 import { Transitionable } from '../decorators/transitionable';
 import { serviceClient } from '../services/container';
-import { ServiceClient } from '../services/service-client';
+import { ServiceClient } from 'service-client';
 import { Feedback } from './feedback';
 
 export abstract class AlertFeedbackForm extends HTMLElement {

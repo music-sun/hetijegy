@@ -1,7 +1,7 @@
 import { Reference } from '../decorators/reference';
 import { AlertFeedbackForm } from './alert-feedback-form';
 import { captchaService } from '../services/container';
-import { CaptchaService } from '../services/captcha-service';
+import { CaptchaService } from 'captcha-service';
 
 const INVALID_EMAIL = 'Hibás e-mail címet adtál meg!';
 const USER_EXISTS   = 'Ezzel a címmel már regisztráltak!';

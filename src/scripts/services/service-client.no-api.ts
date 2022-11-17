@@ -1,6 +1,4 @@
-import { ServiceClient } from './service-client';
-
-export default class implements ServiceClient {
+export class ServiceClient {
     constructor (_baseUrl: string) {}
 
     public subscribe(_email: string, _token: string) {
