@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
+import fetch from 'node-fetch';
 
 function getContext(mode) {
     if (mode === 'no-api') return require('./data.json');
