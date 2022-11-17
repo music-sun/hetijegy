@@ -1,9 +1,9 @@
 import { ServiceClient } from './service-client';
 
 export default class implements ServiceClient {
-    constructor (baseUrl: string) {}
+    constructor (_baseUrl: string) {}
 
-    public subscribe(email: string, token: string) {
+    public subscribe(_email: string, _token: string) {
         return new Promise<Response>(r => r({
             ok: true,
             json: function() {
@@ -12,7 +12,7 @@ export default class implements ServiceClient {
         } as Response));
     }
 
-    public unsubscribe(email: string) {
+    public unsubscribe(_email: string) {
         return new Promise<Response>(resolve => resolve({ ok: true } as Response));
     }
 };
